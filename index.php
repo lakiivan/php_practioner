@@ -1,26 +1,41 @@
 <?php
 
     require 'functions.php';
+    //todo Aplication
+    class Task {
+        
+        protected $description;
+        protected $completed = false;
 
-    $task = [
-        'title' => 'install ios software',
-        'due' => 'tomorrow',
-        'assigned_to' => 'Ivan',
-        'isCompleted' => False
+        public function __construct($description) 
+        {
+            $this -> description = $description;
+        }
 
+        public function complete() 
+        {
+            $this -> completed = true;
+        }
+
+        public function is_completed() 
+        {
+            return $this -> completed;
+        }
+
+        public function get_description()
+        {
+            return $this -> description;
+        }
+    }
+
+    $tasks = [
+        new Task('Go to the store'),
+        new Task('Finish my screencast'),
+        new Task('Clean my room')
     ];
 
-    $animals = ['dog', 'cat'];
+    $tasks[0] -> complete();
 
-    
-
-    //dd($animals);
-
-    $age1 = 15;
-    $age2 = 23;
-
-    nightClubAgeApproval($age1);
-    nightClubAgeApproval($age2);
-
+    //dd($tasks);
 
     require 'index.view.php';

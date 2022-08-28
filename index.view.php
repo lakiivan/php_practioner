@@ -12,30 +12,18 @@
         Task for the Day 
     </h1>
     <ul>
-        <li>
-            <strong>Name: </strong> <?= $task['title']; ?>
-        </li>
-
-        <li>
-            <strong>Dut Date: </strong> <?= $task['due']; ?>
-        </li>
-
-        <li>
-            <strong>Person Responsible: </strong> <?= $task['assigned_to']; ?>
-        </li>
-
-        <li>
-            <strong>Status: </strong> 
-            <?php  if ($task['isCompleted']) : ?>
-                <span class="icon">&#9989</span>  
-            <?php else: ?>
-                <span class="icon">&#10060;</span>
-            <?php endif; ?>
-        </li>
-
+        <?php foreach ($tasks as $task) : ?>
+            <li>
+                <?php if($task -> is_completed()) : ?>
+                    <strike>
+                    <span>&#9989;<?=$task -> get_description(); ?></span>
+                    </strike>
+                <?php else : ?>
+                    <span>&#10060;<?=$task -> get_description(); ?></span>
+                <?php endif; ?>    
+            </li>
+        <?php endforeach; ?>    
     </ul>
-
-
 </header>
 
 </body>
