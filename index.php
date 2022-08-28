@@ -2,7 +2,7 @@
 
     $task = [
         'title' => 'install ios software',
-        'due' => 'tomrrow',
+        'due' => 'tomorrow',
         'assigned_to' => 'Ivan',
         'isCompleted' => False
 
