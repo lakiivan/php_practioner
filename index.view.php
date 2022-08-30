@@ -9,17 +9,17 @@
 
 <header>
     <h1>
-        Task for the Day 
+        Task for the Day
     </h1>
     <ul>
         <?php foreach ($tasks as $task) : ?>
             <li>
-                <?php if($task -> is_completed()) : ?>
+                <?php if($task -> completed) : ?>
                     <strike>
-                    <span>&#9989;<?=$task -> get_description(); ?></span>
+                    <span>&#9989;<?=$task -> description; ?></span>
                     </strike>
                 <?php else : ?>
-                    <span>&#10060;<?=$task -> get_description(); ?></span>
+                    <span>&#10060;<?=$task -> description; ?></span>
                 <?php endif; ?>    
             </li>
         <?php endforeach; ?>    
