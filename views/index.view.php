@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang="en>
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-
-<body>
+<?php require('views/partials/head.php'); ?>
 
 <header>
     <h1>
-        Task for the Day
+        Task for the day
     </h1>
+</header>
+
     <ul>
         <?php foreach ($tasks as $task) : ?>
             <li>
@@ -24,7 +19,5 @@
             </li>
         <?php endforeach; ?>    
     </ul>
-</header>
 
-</body>
-</html>
+<?php require('views/partials/footer.php'); ?>
