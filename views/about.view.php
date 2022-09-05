@@ -2,7 +2,7 @@
 
 <header>
     <h1>
-        About
+        About <?= $company; ?>
     </h1>
 </header>
 
