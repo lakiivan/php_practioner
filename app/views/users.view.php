@@ -1,4 +1,4 @@
-<?php require('views/partials/head.php'); ?>
+<?php require('partials/head.php'); ?>
 
 <h1>All users</h1>
 
@@ -17,4 +17,4 @@
     <button type="submit">Submit</button>
 </form>    
 
-<?php require('views/partials/footer.php'); ?>
+<?php require('footer.php'); ?>

@@ -28,7 +28,7 @@ class PagesController
 
         $company = 'Laracast';
 
-        return view('about/culture', ['company'=>$company]);
+        return view('about-culture', ['company'=>$company]);
     }
 
 
