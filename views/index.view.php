@@ -1,23 +1,18 @@
 <?php require('views/partials/head.php'); ?>
 
+<?php foreach ($users as $user) : ?>
+    <li><?= $user->name; ?></li>
+<?php endforeach; ?>
+
 <header>
     <h1>
-        Task for the day
+        Submit Your Name
     </h1>
 </header>
 
-    <ul>
-        <?php foreach ($tasks as $task) : ?>
-            <li>
-                <?php if($task -> completed) : ?>
-                    <strike>
-                    <span>&#9989;<?=$task -> description; ?></span>
-                    </strike>
-                <?php else : ?>
-                    <span>&#10060;<?=$task -> description; ?></span>
-                <?php endif; ?>    
-            </li>
-        <?php endforeach; ?>    
-    </ul>
+<form method="POST" action="/names">
+    <input name="name"></input>
+    <button type="submit">Submit</button>
+</form>    
 
 <?php require('views/partials/footer.php'); ?>
