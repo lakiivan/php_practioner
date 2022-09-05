@@ -17,4 +17,4 @@
     <button type="submit">Submit</button>
 </form>    
 
-<?php require('footer.php'); ?>
+<?php require('partials/footer.php'); ?>
